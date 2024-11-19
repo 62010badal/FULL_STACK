@@ -1,5 +1,4 @@
-{
-  "products": [
+const products = [
     {
       "id": 1,
       "title": "Essence Mascara Lash Princess",
@@ -11805,4 +11804,9 @@
       "thumbnail": "https://cdn.dummyjson.com/products/images/womens-watches/Women's%20Wrist%20Watch/thumbnail.png"
     }
   ]
-}
+
+
+
+  const categories = [...new Set([...products.map(p=>p.category)])]
+
+  categories.map(c=> ({value:c, label:c.split('-').join(' '),checked:false}))
